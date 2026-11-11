@@ -1,12 +1,12 @@
 # Daily Graphs
 
-One graph for each class meeting. Each graph puts two things side by side that people rarely compare, and holds back one answer for the room to guess.
+Each graph puts two things side by side that people rarely compare, and holds back one answer for the room to guess. New graphs are posted by day.
 
 See them all, with the story and reading links for each: https://kramermusician.github.io/daily-graphs/
 
 Every number is checked against a named source before a graph is posted. The sources are printed at the foot of each graph.
 
-## Graphs
+## Wednesday, November 11, 2026
 
 - [Music’s machines had other first careers](graphs/music-machines-first-careers.png)
 - [Chips got bigger. Did we get faster?](graphs/chips-vs-sprinters.png)
