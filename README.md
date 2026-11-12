@@ -8,7 +8,6 @@ Every number is checked against a named source before a graph is posted. The sou
 
 ## Wednesday, November 11, 2026
 
-- [The 27 Club, tested](graphs/27-club-tested.png)
 - [Music’s machines had other first careers](graphs/music-machines-first-careers.png)
 - [Chips got bigger. Did we get faster?](graphs/chips-vs-sprinters.png)
 - [Every album has a carbon timestamp](graphs/carbon-timestamp.png)
