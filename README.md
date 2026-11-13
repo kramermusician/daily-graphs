@@ -6,6 +6,10 @@ See them all, with the story and reading links for each: https://kramermusician.
 
 Every number is checked against a named source before a graph is posted. The sources are printed at the foot of each graph.
 
+## Friday, November 13, 2026
+
+- [Which city is the rainy one?](graphs/boston-vs-seattle-rain.png)
+
 ## Wednesday, November 11, 2026
 
 - [Music’s machines had other first careers](graphs/music-machines-first-careers.png)
