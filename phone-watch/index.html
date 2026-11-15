@@ -1,10 +1,10 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Phone Watch: who is on their phone, city by city</title>
-<meta name="description" content="Every half hour a computer looks at public street webcams in Tokyo, Osaka, London and New York and counts how many people are on their phones.">
+<meta name="description" content="Every half hour a computer looks at public street webcams in 10 cities around the world and counts how many people are on their phones.">
 <style>
 :root{--cream:#f7f3ea;--ink:#2b2a26;--muted:#6b675d;--line:#e2dccd;--card:#fffdf8;--ocean:#2f6b8a;
---s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100}
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--s5:#8a4fbf;--s6:#d6336c;--s7:#0f8b8d;--s8:#7a5c2e;--s9:#5c7cfa;--s10:#4d4a42}
 *{box-sizing:border-box}
 body{margin:0;background:var(--cream);color:var(--ink);font:18px/1.55 -apple-system,"Helvetica Neue",Arial,sans-serif}
 main{max-width:1000px;margin:0 auto;padding:40px 22px 70px}
@@ -34,13 +34,19 @@ summary{cursor:pointer;font-weight:600}
 table{border-collapse:collapse;width:100%;font-size:15px;margin-top:10px}
 th,td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--line)}
 td.n{text-align:right;font-variant-numeric:tabular-nums}
+.frames{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:10px 0}
+.frames figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.frames img{display:block;width:100%;height:auto}
+.frames figcaption{padding:8px 12px;font-size:14px;color:var(--muted)}
+.frames figcaption b{color:var(--ink)}
+.key span{display:inline-block;width:14px;height:10px;border:3px solid var(--k);margin:0 5px 0 12px;vertical-align:-1px}
 ol li{margin:6px 0}
 footer{margin-top:50px;color:var(--muted);font-size:14px;font-style:italic;text-align:center}
 @media(max-width:600px){h1{font-size:38px}}
 </style></head><body><main>
 <a class="back" href="../">Daily Graphs</a>
 <h1>Phone Watch</h1>
-<p class="lede">Every half hour, a computer looks at public street webcams in four cities and counts how many of the people it can see are on their phones. The chart keeps growing.</p>
+<p class="lede">Every half hour, a computer looks at public street webcams in 10 cities and counts how many of the people it can see are on their phones. The chart keeps growing.</p>
 <p class="sub" id="since"></p>
 
 <div class="guess" id="guess"><b>Guess first.</b> Which city has the most people on their phones? Which has the fewest? Say it out loud, then <button onclick="reveal()">show me</button></div>
@@ -51,6 +57,10 @@ footer{margin-top:50px;color:var(--muted);font-size:14px;font-style:italic;text-
 <h2>Share on their phones, all data so far</h2>
 <p class="sub">Of the people the computer could judge, the share who were on a phone. The thin line on each bar shows how sure we can be: wider means fewer people counted.</p>
 <div class="chart" id="bars"></div>
+
+<h2>What the computer saw</h2>
+<p class="sub">The latest frame from each camera, with the computer's boxes.<span class="key"><span style="--k:red"></span>on a phone<span style="--k:lime"></span>not<span style="--k:yellow"></span>unclear.</span> Click a frame to see it bigger. Do you agree with it?</p>
+<div class="frames"><figure><a href="frames/tokyo-shibuya-centergai.jpg?v=20261115T1224Z" target="_blank"><img loading="lazy" src="frames/tokyo-shibuya-centergai.jpg?v=20261115T1224Z" alt="Street webcam frame, Shibuya Center Gai, Tokyo, with boxes around people"></a><figcaption><b>Tokyo</b>, Shibuya Center Gai, Nov 15, 21:24 local time. Camera: Shibuya Television</figcaption></figure><figure><a href="frames/osaka-dotonbori.jpg?v=20261115T1224Z" target="_blank"><img loading="lazy" src="frames/osaka-dotonbori.jpg?v=20261115T1224Z" alt="Street webcam frame, Dotonbori, Osaka, with boxes around people"></a><figcaption><b>Osaka</b>, Dotonbori, Nov 15, 21:24 local time. Camera: RVJJP</figcaption></figure><figure><a href="frames/london-abbey-road.jpg?v=20261115T1224Z" target="_blank"><img loading="lazy" src="frames/london-abbey-road.jpg?v=20261115T1224Z" alt="Street webcam frame, Abbey Road crossing, London, with boxes around people"></a><figcaption><b>London</b>, Abbey Road crossing, Nov 15, 12:24 local time. Camera: EarthCam</figcaption></figure><figure><a href="frames/seoul-hongdae.jpg?v=20261115T1239Z" target="_blank"><img loading="lazy" src="frames/seoul-hongdae.jpg?v=20261115T1239Z" alt="Street webcam frame, Hongdae crossing, Seoul, with boxes around people"></a><figcaption><b>Seoul</b>, Hongdae crossing, Nov 15, 21:39 local time. Camera: Hongdae Live view</figcaption></figure></div>
 
 <h2>Over time</h2>
 <p class="sub" id="trendSub"></p>
@@ -70,8 +80,8 @@ footer{margin-top:50px;color:var(--muted);font-size:14px;font-style:italic;text-
 </ol>
 
 <details><summary>How this works, and where it goes wrong</summary>
-<p>A small program grabs one frame from each camera every 30 minutes. The cameras are live streams their owners share publicly on YouTube: Shibuya Center Gai in Tokyo (Shibuya Television), Dotonbori in Osaka (RVJJP), the Abbey Road crossing in London (EarthCam) and Times Square in New York (EarthCam).</p>
-<p>A vision model running on one computer, Qwen3-VL 30B-A3B, draws a box around each person close enough to judge and marks them as on a phone, not on a phone, or unclear. Unclear people are left out of the share. Nothing leaves that computer except the counts on this page: no photos are kept longer than three days and none are posted.</p>
+<p>A small program grabs one frame from each camera every 30 minutes. The cameras are live streams their owners share publicly on YouTube: Shibuya Center Gai in Tokyo (Shibuya Television), Dotonbori in Osaka (RVJJP), Abbey Road crossing in London (EarthCam), Bryant Park in New York (Bryant Park NYC), Hongdae crossing in Seoul (Hongdae Live view), Sukhumvit Soi 11 in Bangkok (The Real Samui Webcam), Agdao street corner in Davao City (JazBaz Philippines), city-centre intersection in Melbourne (Cityscape Live), Temple Bar in Dublin (EarthCam) and Copacabana promenade in Rio de Janeiro (Homes in Rio).</p>
+<p>A vision model running on one computer, Qwen3-VL 30B-A3B, draws a box around each person close enough to judge and marks them as on a phone, not on a phone, or unclear. Unclear people are left out of the share. Nothing leaves that computer except the counts on this page: the latest frame from each camera is shown above, and every other photo is deleted after three days.</p>
 <p>It makes mistakes. Umbrellas, coats, night, rain on the lens and people facing away all hide phones, so the real numbers are probably higher. The cameras sit at different heights, so the New York camera sees fewer people up close than the Tokyo one. Treat each number as a rough count, not a fact about a whole city.</p>
 </details>
 <details><summary>See the numbers as a table</summary><div id="table"></div></details>
@@ -80,9 +90,9 @@ footer{margin-top:50px;color:var(--muted);font-size:14px;font-style:italic;text-
 </main>
 <div class="tip" id="tip"></div>
 <script>
-const DATA = [{"ts": "2026-11-15T12:24:11+00:00", "cam": "tokyo-shibuya-centergai", "city": "Tokyo", "local": "2026-11-15 21:24", "judged": 15, "yes": 1, "no": 10, "unclear": 4}, {"ts": "2026-11-15T12:24:11+00:00", "cam": "osaka-dotonbori", "city": "Osaka", "local": "2026-11-15 21:24", "judged": 20, "yes": 1, "no": 5, "unclear": 14}, {"ts": "2026-11-15T12:24:11+00:00", "cam": "london-abbey-road", "city": "London", "local": "2026-11-15 12:24", "judged": 6, "yes": 0, "no": 0, "unclear": 6}];
-const CAMS = [{"id": "tokyo-shibuya-centergai", "city": "Tokyo", "place": "Shibuya Center Gai"}, {"id": "osaka-dotonbori", "city": "Osaka", "place": "Dotonbori"}, {"id": "london-abbey-road", "city": "London", "place": "Abbey Road crossing"}, {"id": "nyc-bryant-park", "city": "New York", "place": "Bryant Park"}];
-const COLORS = ["var(--s1)","var(--s2)","var(--s3)","var(--s4)"];
+const DATA = [{"ts": "2026-11-15T12:24:11+00:00", "cam": "tokyo-shibuya-centergai", "city": "Tokyo", "local": "2026-11-15 21:24", "judged": 15, "yes": 1, "no": 10, "unclear": 4}, {"ts": "2026-11-15T12:24:11+00:00", "cam": "osaka-dotonbori", "city": "Osaka", "local": "2026-11-15 21:24", "judged": 20, "yes": 1, "no": 5, "unclear": 14}, {"ts": "2026-11-15T12:24:11+00:00", "cam": "london-abbey-road", "city": "London", "local": "2026-11-15 12:24", "judged": 6, "yes": 0, "no": 0, "unclear": 6}, {"ts": "2026-11-15T12:39:31+00:00", "cam": "seoul-hongdae", "city": "Seoul", "local": "2026-11-15 21:39", "judged": 29, "yes": 0, "no": 1, "unclear": 28}];
+const CAMS = [{"id": "tokyo-shibuya-centergai", "city": "Tokyo", "place": "Shibuya Center Gai"}, {"id": "osaka-dotonbori", "city": "Osaka", "place": "Dotonbori"}, {"id": "london-abbey-road", "city": "London", "place": "Abbey Road crossing"}, {"id": "nyc-bryant-park", "city": "New York", "place": "Bryant Park"}, {"id": "seoul-hongdae", "city": "Seoul", "place": "Hongdae crossing"}, {"id": "bangkok-sukhumvit-soi11", "city": "Bangkok", "place": "Sukhumvit Soi 11"}, {"id": "davao-agdao", "city": "Davao City", "place": "Agdao street corner"}, {"id": "melbourne-intersection", "city": "Melbourne", "place": "city-centre intersection"}, {"id": "dublin-temple-bar", "city": "Dublin", "place": "Temple Bar"}, {"id": "rio-copacabana", "city": "Rio de Janeiro", "place": "Copacabana promenade"}];
+const COLORS = [1,2,3,4,5,6,7,8,9,10].map(i=>`var(--s${i})`);
 const cities = CAMS.map((c,i)=>({id:c.id, city:c.city, place:c.place, color:COLORS[i]}));
 const byCam = id => DATA.filter(r=>r.cam===id);
 const pct = (y,n) => (y+n) ? 100*y/(y+n) : null;
