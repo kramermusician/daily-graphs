@@ -1,0 +1,169 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Phone Watch: who is on their phone, city by city</title>
+<meta name="description" content="Every half hour a computer looks at public street webcams in Tokyo, Osaka, London and New York and counts how many people are on their phones.">
+<style>
+:root{--cream:#f7f3ea;--ink:#2b2a26;--muted:#6b675d;--line:#e2dccd;--card:#fffdf8;--ocean:#2f6b8a;
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font:18px/1.55 -apple-system,"Helvetica Neue",Arial,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:40px 22px 70px}
+a{color:var(--ocean)}
+.back{font-size:15px}
+h1{font:400 52px/1.1 Didot,"Bodoni 72",serif;margin:14px 0 8px}
+h2{font:400 30px/1.2 Didot,"Bodoni 72",serif;margin:44px 0 6px}
+.lede{font-size:20px;max-width:720px}
+.sub{color:var(--muted);font-size:15px;margin:0 0 14px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:26px 0}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;border-top:5px solid var(--c)}
+.tile .city{font-weight:600}
+.tile .big{font-size:44px;font-weight:300;line-height:1.1;margin:4px 0}
+.tile .small{color:var(--muted);font-size:14px}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;position:relative}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font:13px -apple-system,"Helvetica Neue",Arial,sans-serif;fill:var(--muted)}
+svg .lab{fill:var(--ink);font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15px;margin:0 0 8px}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--c);margin-right:6px;vertical-align:-1px}
+.tip{position:absolute;pointer-events:none;background:#2b2a26;color:#fff;font-size:14px;padding:7px 10px;border-radius:8px;opacity:0;transition:opacity .1s;white-space:nowrap}
+.guess{background:#efe8d8;border-radius:14px;padding:16px 20px;margin:26px 0}
+.guess button{font:inherit;background:var(--ocean);color:#fff;border:0;border-radius:99px;padding:8px 18px;cursor:pointer}
+.hidden{filter:blur(14px);pointer-events:none;user-select:none}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 18px;margin:14px 0}
+summary{cursor:pointer;font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:15px;margin-top:10px}
+th,td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--line)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+ol li{margin:6px 0}
+footer{margin-top:50px;color:var(--muted);font-size:14px;font-style:italic;text-align:center}
+@media(max-width:600px){h1{font-size:38px}}
+</style></head><body><main>
+<a class="back" href="../">Daily Graphs</a>
+<h1>Phone Watch</h1>
+<p class="lede">Every half hour, a computer looks at public street webcams in four cities and counts how many of the people it can see are on their phones. The chart keeps growing.</p>
+<p class="sub" id="since"></p>
+
+<div class="guess" id="guess"><b>Guess first.</b> Which city has the most people on their phones? Which has the fewest? Say it out loud, then <button onclick="reveal()">show me</button></div>
+
+<div id="reveal" class="hidden">
+<div class="tiles" id="tiles"></div>
+
+<h2>Share on their phones, all data so far</h2>
+<p class="sub">Of the people the computer could judge, the share who were on a phone. The thin line on each bar shows how sure we can be: wider means fewer people counted.</p>
+<div class="chart" id="bars"></div>
+
+<h2>Over time</h2>
+<p class="sub" id="trendSub"></p>
+<div class="chart"><div class="legend" id="legend"></div><div id="trend"></div></div>
+
+<h2>By time of day, local time</h2>
+<p class="sub">When are people most glued? Each city in its own clock, grouped into four-hour blocks.</p>
+<div class="chart"><div class="legend" id="legend2"></div><div id="hours"></div></div>
+</div>
+
+<h2>Talk about it</h2>
+<ol>
+<li>Does the number in your city surprise you? Why might it be higher or lower than you guessed?</li>
+<li>The computer only counts phones it can see. Who is it missing, and does that push the number up or down?</li>
+<li>Is "on a phone" the same as "addicted"? What would you need to see to tell the difference?</li>
+<li>Count your own street for five minutes. How close do you get to the computer?</li>
+</ol>
+
+<details><summary>How this works, and where it goes wrong</summary>
+<p>A small program grabs one frame from each camera every 30 minutes. The cameras are live streams their owners share publicly on YouTube: Shibuya Center Gai in Tokyo (Shibuya Television), Dotonbori in Osaka (RVJJP), the Abbey Road crossing in London (EarthCam) and Times Square in New York (EarthCam).</p>
+<p>A vision model running on one computer, Qwen3-VL 30B-A3B, draws a box around each person close enough to judge and marks them as on a phone, not on a phone, or unclear. Unclear people are left out of the share. Nothing leaves that computer except the counts on this page: no photos are kept longer than three days and none are posted.</p>
+<p>It makes mistakes. Umbrellas, coats, night, rain on the lens and people facing away all hide phones, so the real numbers are probably higher. The cameras sit at different heights, so the New York camera sees fewer people up close than the Tokyo one. Treat each number as a rough count, not a fact about a whole city.</p>
+</details>
+<details><summary>See the numbers as a table</summary><div id="table"></div></details>
+
+<footer>Assistant Professor Kramer Gibson, Berklee College of Music</footer>
+</main>
+<div class="tip" id="tip"></div>
+<script>
+const DATA = [{"ts": "2026-11-15T12:24:11+00:00", "cam": "tokyo-shibuya-centergai", "city": "Tokyo", "local": "2026-11-15 21:24", "judged": 15, "yes": 1, "no": 10, "unclear": 4}, {"ts": "2026-11-15T12:24:11+00:00", "cam": "osaka-dotonbori", "city": "Osaka", "local": "2026-11-15 21:24", "judged": 20, "yes": 1, "no": 5, "unclear": 14}, {"ts": "2026-11-15T12:24:11+00:00", "cam": "london-abbey-road", "city": "London", "local": "2026-11-15 12:24", "judged": 6, "yes": 0, "no": 0, "unclear": 6}];
+const CAMS = [{"id": "tokyo-shibuya-centergai", "city": "Tokyo", "place": "Shibuya Center Gai"}, {"id": "osaka-dotonbori", "city": "Osaka", "place": "Dotonbori"}, {"id": "london-abbey-road", "city": "London", "place": "Abbey Road crossing"}, {"id": "nyc-bryant-park", "city": "New York", "place": "Bryant Park"}];
+const COLORS = ["var(--s1)","var(--s2)","var(--s3)","var(--s4)"];
+const cities = CAMS.map((c,i)=>({id:c.id, city:c.city, place:c.place, color:COLORS[i]}));
+const byCam = id => DATA.filter(r=>r.cam===id);
+const pct = (y,n) => (y+n) ? 100*y/(y+n) : null;
+const sum = (a,k) => a.reduce((s,r)=>s+(r[k]||0),0);
+const fmt = v => v==null ? "–" : Math.round(v)+"%";
+const tip = document.getElementById("tip");
+function showTip(e, html){ tip.innerHTML=html; tip.style.opacity=1; tip.style.left=(e.pageX+14)+"px"; tip.style.top=(e.pageY-10)+"px"; }
+function hideTip(){ tip.style.opacity=0; }
+function reveal(){ document.getElementById("reveal").classList.remove("hidden"); document.getElementById("guess").style.display="none"; }
+
+if (DATA.length) {
+  const first = DATA[0].ts.slice(0,10), runs = new Set(DATA.map(r=>r.ts.slice(0,16))).size;
+  document.getElementById("since").textContent = `Counting since ${first}. ${runs} check-in${runs===1?"":"s"}, ${sum(DATA,"judged")} people judged so far.`;
+}
+
+if (location.hash === "#show") reveal();
+// tiles: latest check-in per city
+document.getElementById("tiles").innerHTML = cities.map(c=>{
+  const rs = byCam(c.id), last = rs[rs.length-1];
+  if(!last) return `<div class="tile" style="--c:${c.color}"><div class="city">${c.city}</div><div class="small">no data yet</div></div>`;
+  if(!(last.yes+last.no)) return `<div class="tile" style="--c:${c.color}"><div class="city">${c.city} <span class="small">${c.place}</span></div><div class="big">?</div><div class="small">nobody close enough to judge at the last check, ${last.local.slice(11)} local time</div></div>`;
+  return `<div class="tile" style="--c:${c.color}"><div class="city">${c.city} <span class="small">${c.place}</span></div>
+  <div class="big">${last.yes} of ${last.yes+last.no}</div><div class="small">on a phone at the last check, ${last.local.slice(11)} local time</div></div>`;
+}).join("");
+
+// all-time bars with a 95% interval (Wilson)
+function wilson(y,n){ if(!n) return [0,0]; const z=1.96,p=y/n,d=1+z*z/n,c=(p+z*z/(2*n))/d,h=z*Math.sqrt(p*(1-p)/n+z*z/(4*n*n))/d; return [100*(c-h),100*(c+h)]; }
+(function(){
+  const W=900,rowH=46,L=150,R=70,H=cities.length*rowH+30, x=v=>L+(W-L-R)*v/100;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Share of people on phones by city">`;
+  for(const g of [0,25,50,75,100]) s+=`<line x1="${x(g)}" x2="${x(g)}" y1="0" y2="${H-24}" stroke="#e2dccd"/><text x="${x(g)}" y="${H-6}" text-anchor="middle">${g}%</text>`;
+  cities.forEach((c,i)=>{
+    const rs=byCam(c.id), y=sum(rs,"yes"), n=y+sum(rs,"no"), p=pct(y,n), top=i*rowH+8;
+    s+=`<text class="lab" x="${L-10}" y="${top+20}" text-anchor="end">${c.city}</text>`;
+    if(p==null){ s+=`<text x="${L+6}" y="${top+20}">no data yet</text>`; return; }
+    const [lo,hi]=wilson(y,n);
+    s+=`<g onmousemove="showTip(event,'${c.city}: ${y} of ${n} people (${Math.round(p)}%)<br>likely range ${Math.round(lo)} to ${Math.round(hi)}%')" onmouseleave="hideTip()">
+      <rect x="${L}" y="${top}" width="${W-L-R}" height="28" fill="transparent"/>
+      <rect x="${L}" y="${top+4}" width="${Math.max(2,x(p)-L)}" height="20" rx="4" fill="${c.color}"/>
+      <line x1="${x(lo)}" x2="${x(hi)}" y1="${top+14}" y2="${top+14}" stroke="#2b2a26" stroke-width="2"/>
+      <text x="${x(Math.max(p,hi))+8}" y="${top+19}" class="lab">${Math.round(p)}%</text></g>`;
+  });
+  document.getElementById("bars").innerHTML = s+"</svg>";
+})();
+
+// legend
+const legend = cities.map(c=>`<span style="--c:${c.color}">${c.city}</span>`).join("");
+document.getElementById("legend").innerHTML = legend; document.getElementById("legend2").innerHTML = legend;
+
+// trend: by day once there are 2+ days, otherwise by check-in
+function lineChart(el, series, xs, xLabel, tipLabel){
+  const W=900,H=300,L=44,R=80,T=10,B=34;
+  const xi=i=> xs.length<2 ? L+(W-L-R)/2 : L+(W-L-R)*i/(xs.length-1), y=v=>T+(H-T-B)*(1-v/100);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${tipLabel}">`;
+  for(const g of [0,25,50,75,100]) s+=`<line x1="${L}" x2="${W-R}" y1="${y(g)}" y2="${y(g)}" stroke="#e2dccd"/><text x="${L-8}" y="${y(g)+4}" text-anchor="end">${g}%</text>`;
+  const step=Math.max(1,Math.ceil(xs.length/8));
+  xs.forEach((t,i)=>{ if(i%step===0) s+=`<text x="${xi(i)}" y="${H-10}" text-anchor="middle">${xLabel(t)}</text>`; });
+  series.forEach(se=>{
+    const pts=se.vals.map((v,i)=>v==null?null:[xi(i),y(v.p),v]).filter(Boolean);
+    if(!pts.length) return;
+    s+=`<polyline fill="none" stroke="${se.color}" stroke-width="2" stroke-linejoin="round" points="${pts.map(p=>p[0]+","+p[1]).join(" ")}"/>`;
+    pts.forEach(p=> s+=`<circle cx="${p[0]}" cy="${p[1]}" r="5" fill="${se.color}" stroke="#fffdf8" stroke-width="2" onmousemove="showTip(event,'${se.city}, ${p[2].label}: ${p[2].y} of ${p[2].n} (${Math.round(p[2].p)}%)')" onmouseleave="hideTip()"/><circle cx="${p[0]}" cy="${p[1]}" r="12" fill="transparent" onmousemove="showTip(event,'${se.city}, ${p[2].label}: ${p[2].y} of ${p[2].n} (${Math.round(p[2].p)}%)')" onmouseleave="hideTip()"/>`);
+    const last=pts[pts.length-1]; s+=`<text class="lab" x="${last[0]+10}" y="${last[1]+4}">${se.city}</text>`;
+  });
+  document.getElementById(el).innerHTML=s+"</svg>";
+}
+(function(){
+  const days=[...new Set(DATA.map(r=>r.ts.slice(0,10)))].sort();
+  const daily=days.length>=2, key=r=> daily ? r.ts.slice(0,10) : r.ts.slice(0,16);
+  const xs=[...new Set(DATA.map(key))].sort();
+  document.getElementById("trendSub").textContent = daily ? "Each dot is one day (UTC) for one city." : "Each dot is one half-hour check-in (UTC). Once there are two days of data this switches to one dot per day.";
+  const series=cities.map(c=>({city:c.city,color:c.color,vals:xs.map(t=>{const rs=byCam(c.id).filter(r=>key(r)===t),y=sum(rs,"yes"),n=y+sum(rs,"no");return n?{p:100*y/n,y,n,label:t.replace("T"," ")}:null;})}));
+  lineChart("trend",series,xs,t=> daily ? t.slice(5) : t.slice(11),"Share on phones over time");
+})();
+(function(){
+  const blocks=["0-4","4-8","8-12","12-16","16-20","20-24"];
+  const series=cities.map(c=>({city:c.city,color:c.color,vals:blocks.map((b,i)=>{const rs=byCam(c.id).filter(r=>Math.floor(+r.local.slice(11,13)/4)===i),y=sum(rs,"yes"),n=y+sum(rs,"no");return n?{p:100*y/n,y,n,label:b+" h"}:null;})}));
+  lineChart("hours",series,blocks,b=>b+" h","Share on phones by local time of day");
+})();
+
+// table view
+document.getElementById("table").innerHTML = `<table><tr><th>City</th><th>Checks</th><th>People judged</th><th>On a phone</th><th>Not</th><th>Unclear</th><th>Share</th></tr>`+
+  cities.map(c=>{const rs=byCam(c.id),y=sum(rs,"yes"),n=sum(rs,"no");return `<tr><td>${c.city}</td><td class="n">${rs.length}</td><td class="n">${sum(rs,"judged")}</td><td class="n">${y}</td><td class="n">${n}</td><td class="n">${sum(rs,"unclear")}</td><td class="n">${fmt(pct(y,n))}</td></tr>`}).join("")+"</table>";
+</script></body></html>

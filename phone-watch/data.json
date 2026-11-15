@@ -1,0 +1,32 @@
+[
+{
+"ts": "2026-11-15T12:24:11+00:00",
+"cam": "tokyo-shibuya-centergai",
+"city": "Tokyo",
+"local": "2026-11-15 21:24",
+"judged": 15,
+"yes": 1,
+"no": 10,
+"unclear": 4
+},
+{
+"ts": "2026-11-15T12:24:11+00:00",
+"cam": "osaka-dotonbori",
+"city": "Osaka",
+"local": "2026-11-15 21:24",
+"judged": 20,
+"yes": 1,
+"no": 5,
+"unclear": 14
+},
+{
+"ts": "2026-11-15T12:24:11+00:00",
+"cam": "london-abbey-road",
+"city": "London",
+"local": "2026-11-15 12:24",
+"judged": 6,
+"yes": 0,
+"no": 0,
+"unclear": 6
+}
+]
