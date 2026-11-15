@@ -6,6 +6,10 @@ See them all, with the story and reading links for each: https://kramermusician.
 
 Every number is checked against a named source before a graph is posted. The sources are printed at the foot of each graph.
 
+## Sunday, November 15, 2026
+
+- [What got shorter: the sentences or the words?](graphs/inaugural-sentences-vs-words.png)
+
 ## Saturday, November 14, 2026
 
 - [How often does a hit skip English?](graphs/hot-100-skips-english.png)
