@@ -948,5 +948,45 @@
 "yes": 1,
 "no": 2,
 "unclear": 6
+},
+{
+"ts": "2026-11-16T11:06:35+00:00",
+"cam": "seoul-hongdae",
+"city": "Seoul",
+"local": "2026-11-16 20:06",
+"judged": 22,
+"yes": 2,
+"no": 13,
+"unclear": 7
+},
+{
+"ts": "2026-11-16T11:06:35+00:00",
+"cam": "bangkok-sukhumvit-soi11",
+"city": "Bangkok",
+"local": "2026-11-16 18:06",
+"judged": 8,
+"yes": 1,
+"no": 4,
+"unclear": 3
+},
+{
+"ts": "2026-11-16T11:06:35+00:00",
+"cam": "davao-agdao",
+"city": "Davao City",
+"local": "2026-11-16 19:06",
+"judged": 10,
+"yes": 0,
+"no": 6,
+"unclear": 4
+},
+{
+"ts": "2026-11-16T11:06:35+00:00",
+"cam": "dublin-temple-bar",
+"city": "Dublin",
+"local": "2026-11-16 11:06",
+"judged": 20,
+"yes": 2,
+"no": 18,
+"unclear": 0
 }
 ]
