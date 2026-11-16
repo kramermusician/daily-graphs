@@ -6,6 +6,10 @@ See them all, with the story and reading links for each: https://kramermusician.
 
 Every number is checked against a named source before a graph is posted. The sources are printed at the foot of each graph.
 
+## Monday, November 16, 2026
+
+- [How old is your national anthem?](graphs/national-anthem-years.png)
+
 ## Sunday, November 15, 2026
 
 - [What got shorter: the sentences or the words?](graphs/inaugural-sentences-vs-words.png)
