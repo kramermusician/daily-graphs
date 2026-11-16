@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How Phone Watch is made</title>
+<meta name="description" content="How Phone Watch counts people on their phones through public street webcams, using a vision model on one home computer.">
+<style>
+:root{--cream:#f7f3ea;--ink:#2b2a26;--muted:#6b675d;--line:#e2dccd;--card:#fffdf8;--ocean:#2f6b8a;--ocean-soft:#b9cfdc;--sand:#efe8d8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font:18px/1.55 -apple-system,"Helvetica Neue",Arial,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:40px 22px 70px}
+a{color:var(--ocean)}
+.top{display:flex;justify-content:space-between;font-size:15px}
+h1{font:400 52px/1.1 Didot,"Bodoni 72",serif;margin:14px 0 8px}
+h2{font:400 30px/1.2 Didot,"Bodoni 72",serif;margin:46px 0 6px}
+.lede{font-size:20px;max-width:720px}
+.sub{color:var(--muted);font-size:15px;margin:0 0 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+footer{margin-top:50px;color:var(--muted);font-size:14px;font-style:italic;text-align:center}
+@media(max-width:600px){h1{font-size:38px}}
+
+.about{max-width:720px}
+.about p{margin:0 0 14px}
+.cams{list-style:none;padding:0;margin:0}
+.cams li{padding:8px 0;border-bottom:1px solid var(--line);font-size:16px}
+.cams small{color:var(--muted)}
+.thanks{background:var(--sand);border-radius:14px;padding:14px 18px}
+</style></head><body><main>
+<div class="top"><a href="./">Back to Phone Watch</a><a href="../">Daily Graphs</a></div>
+<h1>How this is made</h1>
+<div class="about"><h2>What this is</h2>
+<p>Phone Watch counts how many people on city streets are using their phones. It looks through public street webcams in 13 cities, once an hour, every day. The numbers on the main page grow with every check.</p>
+<h2>How it is made</h2>
+<p>Each camera is a fixed webcam that its owner streams on YouTube for anyone to watch. The list is at the bottom of this page.</p>
+<p>Once an hour, a small program on one Mac mini at home takes a single frame from each stream. A vision model called Qwen3-VL 30B-A3B runs on that same Mac. It draws a box around each person close enough to judge, up to 30 people per frame.</p>
+<p>Then the program takes a second look. It cuts out each person and makes the picture bigger. The model says if it can see a phone, where the hands are, and if the person is looking at them.</p>
+<p>A phone in a hand counts as yes. Both hands together in front, with eyes on them, also counts as yes. People the model cannot judge are marked unclear and are not part of the share.</p>
+<p>Every night, a second program turns the counts into this website. It runs on the same Mac and uses no AI service.</p>
+<h2>What it costs</h2>
+<p>Each check costs nothing. The model runs on the Mac, not in the cloud, so no photo goes to an AI company and no one pays for each question. A full round of all the cameras takes about half an hour of the computer&#x27;s time.</p>
+<h2>What stays private</h2>
+<p>The model does not know who anyone is. It only sees a box and a phone. The photos stay on the Mac for three days so the counts can be checked, and then they are deleted. The site shows only the counts and the newest frame from each camera, and that frame is replaced every day.</p>
+<h2>Where it goes wrong</h2>
+<p>Night, rain, umbrellas, coats and people facing away all hide phones. Some cameras sit high above the street, so the people look small. Read each number as a rough count from one street corner, not a fact about a whole city. We removed the Rio de Janeiro camera because it was too far away to judge anyone.</p>
+<h2>Thank you</h2>
+<p class="thanks">The idea came from the <a href="https://waldoworld.com/" target="_blank" rel="noopener">WaldoWorld</a> website. Thank you also to the people who keep these cameras running.</p>
+<h2>The cameras</h2>
+<ul class="cams"><li><b>Tokyo</b>, Japan: Shibuya Center Gai <small>camera by Shibuya Television, <a href="https://www.youtube.com/watch?v=CmVnsv71Qr8" target="_blank" rel="noopener">watch it live</a></small></li><li><b>Osaka</b>, Japan: Dotonbori <small>camera by RVJJP, <a href="https://www.youtube.com/watch?v=K-ibJs5xuuw" target="_blank" rel="noopener">watch it live</a></small></li><li><b>London</b>, UK: Abbey Road crossing <small>camera by EarthCam, <a href="https://www.youtube.com/watch?v=zMCea32gpmg" target="_blank" rel="noopener">watch it live</a></small></li><li><b>New York</b>, USA: Bryant Park <small>camera by Bryant Park NYC, <a href="https://www.youtube.com/watch?v=hMWSUCXkj6w" target="_blank" rel="noopener">watch it live</a></small></li><li><b>Seoul</b>, South Korea: Hongdae crossing <small>camera by Hongdae Live view, <a href="https://www.youtube.com/watch?v=rHj1PNSOw_4" target="_blank" rel="noopener">watch it live</a></small></li><li><b>Bangkok</b>, Thailand: Sukhumvit Soi 11 <small>camera by The Real Samui Webcam, <a href="https://www.youtube.com/watch?v=UemFRPrl1hk" target="_blank" rel="noopener">watch it live</a></small></li><li><b>Davao City</b>, Philippines: Agdao street corner <small>camera by JazBaz Philippines, <a href="https://www.youtube.com/watch?v=yznpQlk0exE" target="_blank" rel="noopener">watch it live</a></small></li><li><b>Melbourne</b>, Australia: city-centre intersection <small>camera by Cityscape Live, <a href="https://www.youtube.com/watch?v=gEbrHdFRgpQ" target="_blank" rel="noopener">watch it live</a></small></li><li><b>Dublin</b>, Ireland: Temple Bar <small>camera by EarthCam, <a href="https://www.youtube.com/watch?v=3nyPER2kzqk" target="_blank" rel="noopener">watch it live</a></small></li><li><b>Jiufen</b>, Taiwan: Old Street entrance, Jishan Street <small>camera by TUI Hz (relay of the New Taipei street camera), <a href="https://www.youtube.com/watch?v=RzwHRRUPccU" target="_blank" rel="noopener">watch it live</a></small></li><li><b>Venice</b>, Italy: Ponte delle Guglie and Strada Nova <small>camera by Hotel Marte (I Love You Venice), <a href="https://www.youtube.com/watch?v=GQbUdGhHw_o" target="_blank" rel="noopener">watch it live</a></small></li><li><b>New Orleans</b>, USA: French Quarter street <small>camera by EarthCam, <a href="https://www.youtube.com/watch?v=xqdukYhcGEU" target="_blank" rel="noopener">watch it live</a></small></li><li><b>Key West</b>, USA: Duval Street <small>camera by Florida Keys TDC, <a href="https://www.youtube.com/watch?v=f0c4udZWCnE" target="_blank" rel="noopener">watch it live</a></small></li></ul>
+</div>
+<footer>Assistant Professor Kramer Gibson, Berklee College of Music</footer>
+</main></body></html>
