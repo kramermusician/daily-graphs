@@ -988,5 +988,1115 @@
 "yes": 2,
 "no": 18,
 "unclear": 0
+},
+{
+"ts": "2026-11-16T12:33:42+00:00",
+"cam": "tokyo-shibuya-centergai",
+"city": "Tokyo",
+"local": "2026-11-16 21:33",
+"judged": 30,
+"yes": 5,
+"no": 19,
+"unclear": 6
+},
+{
+"ts": "2026-11-16T12:33:42+00:00",
+"cam": "osaka-dotonbori",
+"city": "Osaka",
+"local": "2026-11-16 21:33",
+"judged": 30,
+"yes": 3,
+"no": 21,
+"unclear": 6
+},
+{
+"ts": "2026-11-16T12:33:42+00:00",
+"cam": "london-abbey-road",
+"city": "London",
+"local": "2026-11-16 12:33",
+"judged": 20,
+"yes": 0,
+"no": 4,
+"unclear": 16
+},
+{
+"ts": "2026-11-16T12:33:42+00:00",
+"cam": "nyc-bryant-park",
+"city": "New York",
+"local": "2026-11-16 07:33",
+"judged": 5,
+"yes": 0,
+"no": 1,
+"unclear": 4
+},
+{
+"ts": "2026-11-16T12:33:42+00:00",
+"cam": "seoul-hongdae",
+"city": "Seoul",
+"local": "2026-11-16 21:33",
+"judged": 16,
+"yes": 2,
+"no": 11,
+"unclear": 3
+},
+{
+"ts": "2026-11-16T12:33:42+00:00",
+"cam": "bangkok-sukhumvit-soi11",
+"city": "Bangkok",
+"local": "2026-11-16 19:33",
+"judged": 9,
+"yes": 0,
+"no": 1,
+"unclear": 8
+},
+{
+"ts": "2026-11-16T12:33:42+00:00",
+"cam": "davao-agdao",
+"city": "Davao City",
+"local": "2026-11-16 20:33",
+"judged": 12,
+"yes": 0,
+"no": 3,
+"unclear": 9
+},
+{
+"ts": "2026-11-16T12:33:42+00:00",
+"cam": "dublin-temple-bar",
+"city": "Dublin",
+"local": "2026-11-16 12:33",
+"judged": 20,
+"yes": 4,
+"no": 12,
+"unclear": 4
+},
+{
+"ts": "2026-11-16T12:33:42+00:00",
+"cam": "jiufen-old-street",
+"city": "Jiufen",
+"local": "2026-11-16 20:33",
+"judged": 2,
+"yes": 0,
+"no": 0,
+"unclear": 2
+},
+{
+"ts": "2026-11-16T12:33:42+00:00",
+"cam": "venice-strada-nova",
+"city": "Venice",
+"local": "2026-11-16 13:33",
+"judged": 29,
+"yes": 0,
+"no": 0,
+"unclear": 29
+},
+{
+"ts": "2026-11-16T14:03:17+00:00",
+"cam": "tokyo-shibuya-centergai",
+"city": "Tokyo",
+"local": "2026-11-16 23:03",
+"judged": 20,
+"yes": 5,
+"no": 10,
+"unclear": 5
+},
+{
+"ts": "2026-11-16T14:03:17+00:00",
+"cam": "osaka-dotonbori",
+"city": "Osaka",
+"local": "2026-11-16 23:03",
+"judged": 18,
+"yes": 3,
+"no": 15,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T14:03:17+00:00",
+"cam": "london-abbey-road",
+"city": "London",
+"local": "2026-11-16 14:03",
+"judged": 14,
+"yes": 1,
+"no": 7,
+"unclear": 6
+},
+{
+"ts": "2026-11-16T14:03:17+00:00",
+"cam": "nyc-bryant-park",
+"city": "New York",
+"local": "2026-11-16 09:03",
+"judged": 8,
+"yes": 0,
+"no": 0,
+"unclear": 8
+},
+{
+"ts": "2026-11-16T14:03:17+00:00",
+"cam": "seoul-hongdae",
+"city": "Seoul",
+"local": "2026-11-16 23:03",
+"judged": 4,
+"yes": 0,
+"no": 1,
+"unclear": 3
+},
+{
+"ts": "2026-11-16T14:03:17+00:00",
+"cam": "bangkok-sukhumvit-soi11",
+"city": "Bangkok",
+"local": "2026-11-16 21:03",
+"judged": 15,
+"yes": 0,
+"no": 4,
+"unclear": 11
+},
+{
+"ts": "2026-11-16T14:03:17+00:00",
+"cam": "davao-agdao",
+"city": "Davao City",
+"local": "2026-11-16 22:03",
+"judged": 7,
+"yes": 0,
+"no": 1,
+"unclear": 6
+},
+{
+"ts": "2026-11-16T14:03:17+00:00",
+"cam": "dublin-temple-bar",
+"city": "Dublin",
+"local": "2026-11-16 14:03",
+"judged": 29,
+"yes": 4,
+"no": 18,
+"unclear": 7
+},
+{
+"ts": "2026-11-16T14:03:17+00:00",
+"cam": "venice-strada-nova",
+"city": "Venice",
+"local": "2026-11-16 15:03",
+"judged": 29,
+"yes": 0,
+"no": 0,
+"unclear": 29
+},
+{
+"ts": "2026-11-16T14:03:17+00:00",
+"cam": "key-west-duval",
+"city": "Key West",
+"local": "2026-11-16 09:03",
+"judged": 3,
+"yes": 0,
+"no": 2,
+"unclear": 1
+},
+{
+"ts": "2026-11-16T15:28:22+00:00",
+"cam": "tokyo-shibuya-centergai",
+"city": "Tokyo",
+"local": "2026-11-17 00:28",
+"judged": 9,
+"yes": 2,
+"no": 2,
+"unclear": 5
+},
+{
+"ts": "2026-11-16T15:28:22+00:00",
+"cam": "osaka-dotonbori",
+"city": "Osaka",
+"local": "2026-11-17 00:28",
+"judged": 20,
+"yes": 2,
+"no": 15,
+"unclear": 3
+},
+{
+"ts": "2026-11-16T15:28:22+00:00",
+"cam": "london-abbey-road",
+"city": "London",
+"local": "2026-11-16 15:28",
+"judged": 12,
+"yes": 5,
+"no": 6,
+"unclear": 1
+},
+{
+"ts": "2026-11-16T15:28:22+00:00",
+"cam": "nyc-bryant-park",
+"city": "New York",
+"local": "2026-11-16 10:28",
+"judged": 29,
+"yes": 2,
+"no": 11,
+"unclear": 16
+},
+{
+"ts": "2026-11-16T15:28:22+00:00",
+"cam": "seoul-hongdae",
+"city": "Seoul",
+"local": "2026-11-17 00:28",
+"judged": 3,
+"yes": 2,
+"no": 1,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T15:28:22+00:00",
+"cam": "bangkok-sukhumvit-soi11",
+"city": "Bangkok",
+"local": "2026-11-16 22:28",
+"judged": 10,
+"yes": 0,
+"no": 8,
+"unclear": 2
+},
+{
+"ts": "2026-11-16T15:28:22+00:00",
+"cam": "davao-agdao",
+"city": "Davao City",
+"local": "2026-11-16 23:28",
+"judged": 6,
+"yes": 1,
+"no": 1,
+"unclear": 4
+},
+{
+"ts": "2026-11-16T15:28:22+00:00",
+"cam": "dublin-temple-bar",
+"city": "Dublin",
+"local": "2026-11-16 15:28",
+"judged": 20,
+"yes": 3,
+"no": 13,
+"unclear": 4
+},
+{
+"ts": "2026-11-16T15:28:22+00:00",
+"cam": "venice-strada-nova",
+"city": "Venice",
+"local": "2026-11-16 16:28",
+"judged": 29,
+"yes": 0,
+"no": 0,
+"unclear": 29
+},
+{
+"ts": "2026-11-16T15:28:22+00:00",
+"cam": "new-orleans-french-quarter",
+"city": "New Orleans",
+"local": "2026-11-16 09:28",
+"judged": 2,
+"yes": 0,
+"no": 2,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T15:28:22+00:00",
+"cam": "key-west-duval",
+"city": "Key West",
+"local": "2026-11-16 10:28",
+"judged": 3,
+"yes": 0,
+"no": 0,
+"unclear": 3
+},
+{
+"ts": "2026-11-16T16:53:15+00:00",
+"cam": "tokyo-shibuya-centergai",
+"city": "Tokyo",
+"local": "2026-11-17 01:53",
+"judged": 8,
+"yes": 2,
+"no": 5,
+"unclear": 1
+},
+{
+"ts": "2026-11-16T16:53:15+00:00",
+"cam": "osaka-dotonbori",
+"city": "Osaka",
+"local": "2026-11-17 01:53",
+"judged": 6,
+"yes": 0,
+"no": 6,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T16:53:15+00:00",
+"cam": "london-abbey-road",
+"city": "London",
+"local": "2026-11-16 16:53",
+"judged": 2,
+"yes": 0,
+"no": 0,
+"unclear": 2
+},
+{
+"ts": "2026-11-16T16:53:15+00:00",
+"cam": "nyc-bryant-park",
+"city": "New York",
+"local": "2026-11-16 11:53",
+"judged": 20,
+"yes": 6,
+"no": 14,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T16:53:15+00:00",
+"cam": "bangkok-sukhumvit-soi11",
+"city": "Bangkok",
+"local": "2026-11-16 23:53",
+"judged": 20,
+"yes": 4,
+"no": 6,
+"unclear": 10
+},
+{
+"ts": "2026-11-16T16:53:15+00:00",
+"cam": "davao-agdao",
+"city": "Davao City",
+"local": "2026-11-17 00:53",
+"judged": 2,
+"yes": 0,
+"no": 2,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T16:53:15+00:00",
+"cam": "dublin-temple-bar",
+"city": "Dublin",
+"local": "2026-11-16 16:53",
+"judged": 29,
+"yes": 3,
+"no": 12,
+"unclear": 14
+},
+{
+"ts": "2026-11-16T16:53:15+00:00",
+"cam": "venice-strada-nova",
+"city": "Venice",
+"local": "2026-11-16 17:53",
+"judged": 30,
+"yes": 0,
+"no": 0,
+"unclear": 30
+},
+{
+"ts": "2026-11-16T16:53:15+00:00",
+"cam": "new-orleans-french-quarter",
+"city": "New Orleans",
+"local": "2026-11-16 10:53",
+"judged": 3,
+"yes": 2,
+"no": 0,
+"unclear": 1
+},
+{
+"ts": "2026-11-16T18:13:23+00:00",
+"cam": "tokyo-shibuya-centergai",
+"city": "Tokyo",
+"local": "2026-11-17 03:13",
+"judged": 1,
+"yes": 1,
+"no": 0,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T18:13:23+00:00",
+"cam": "london-abbey-road",
+"city": "London",
+"local": "2026-11-16 18:13",
+"judged": 8,
+"yes": 0,
+"no": 5,
+"unclear": 3
+},
+{
+"ts": "2026-11-16T18:13:23+00:00",
+"cam": "nyc-bryant-park",
+"city": "New York",
+"local": "2026-11-16 13:13",
+"judged": 30,
+"yes": 3,
+"no": 14,
+"unclear": 13
+},
+{
+"ts": "2026-11-16T18:13:23+00:00",
+"cam": "seoul-hongdae",
+"city": "Seoul",
+"local": "2026-11-17 03:13",
+"judged": 2,
+"yes": 0,
+"no": 2,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T18:13:23+00:00",
+"cam": "bangkok-sukhumvit-soi11",
+"city": "Bangkok",
+"local": "2026-11-17 01:13",
+"judged": 25,
+"yes": 0,
+"no": 10,
+"unclear": 15
+},
+{
+"ts": "2026-11-16T18:13:23+00:00",
+"cam": "davao-agdao",
+"city": "Davao City",
+"local": "2026-11-17 02:13",
+"judged": 2,
+"yes": 0,
+"no": 1,
+"unclear": 1
+},
+{
+"ts": "2026-11-16T18:13:23+00:00",
+"cam": "melbourne-intersection",
+"city": "Melbourne",
+"local": "2026-11-17 05:13",
+"judged": 1,
+"yes": 0,
+"no": 0,
+"unclear": 1
+},
+{
+"ts": "2026-11-16T18:13:23+00:00",
+"cam": "dublin-temple-bar",
+"city": "Dublin",
+"local": "2026-11-16 18:13",
+"judged": 20,
+"yes": 1,
+"no": 9,
+"unclear": 10
+},
+{
+"ts": "2026-11-16T18:13:23+00:00",
+"cam": "jiufen-old-street",
+"city": "Jiufen",
+"local": "2026-11-17 02:13",
+"judged": 1,
+"yes": 0,
+"no": 0,
+"unclear": 1
+},
+{
+"ts": "2026-11-16T18:13:23+00:00",
+"cam": "venice-strada-nova",
+"city": "Venice",
+"local": "2026-11-16 19:13",
+"judged": 18,
+"yes": 0,
+"no": 0,
+"unclear": 18
+},
+{
+"ts": "2026-11-16T18:13:23+00:00",
+"cam": "new-orleans-french-quarter",
+"city": "New Orleans",
+"local": "2026-11-16 12:13",
+"judged": 3,
+"yes": 1,
+"no": 2,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T19:33:31+00:00",
+"cam": "tokyo-shibuya-centergai",
+"city": "Tokyo",
+"local": "2026-11-17 04:33",
+"judged": 11,
+"yes": 3,
+"no": 3,
+"unclear": 5
+},
+{
+"ts": "2026-11-16T19:33:31+00:00",
+"cam": "osaka-dotonbori",
+"city": "Osaka",
+"local": "2026-11-17 04:33",
+"judged": 9,
+"yes": 1,
+"no": 6,
+"unclear": 2
+},
+{
+"ts": "2026-11-16T19:33:31+00:00",
+"cam": "london-abbey-road",
+"city": "London",
+"local": "2026-11-16 19:33",
+"judged": 1,
+"yes": 0,
+"no": 1,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T19:33:31+00:00",
+"cam": "nyc-bryant-park",
+"city": "New York",
+"local": "2026-11-16 14:33",
+"judged": 29,
+"yes": 1,
+"no": 23,
+"unclear": 5
+},
+{
+"ts": "2026-11-16T19:33:31+00:00",
+"cam": "bangkok-sukhumvit-soi11",
+"city": "Bangkok",
+"local": "2026-11-17 02:33",
+"judged": 19,
+"yes": 1,
+"no": 10,
+"unclear": 8
+},
+{
+"ts": "2026-11-16T19:33:31+00:00",
+"cam": "melbourne-intersection",
+"city": "Melbourne",
+"local": "2026-11-17 06:33",
+"judged": 3,
+"yes": 0,
+"no": 0,
+"unclear": 3
+},
+{
+"ts": "2026-11-16T19:33:31+00:00",
+"cam": "dublin-temple-bar",
+"city": "Dublin",
+"local": "2026-11-16 19:33",
+"judged": 16,
+"yes": 2,
+"no": 11,
+"unclear": 3
+},
+{
+"ts": "2026-11-16T19:33:31+00:00",
+"cam": "venice-strada-nova",
+"city": "Venice",
+"local": "2026-11-16 20:33",
+"judged": 30,
+"yes": 0,
+"no": 0,
+"unclear": 30
+},
+{
+"ts": "2026-11-16T19:33:31+00:00",
+"cam": "new-orleans-french-quarter",
+"city": "New Orleans",
+"local": "2026-11-16 13:33",
+"judged": 3,
+"yes": 1,
+"no": 2,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T19:33:31+00:00",
+"cam": "key-west-duval",
+"city": "Key West",
+"local": "2026-11-16 14:33",
+"judged": 3,
+"yes": 1,
+"no": 0,
+"unclear": 2
+},
+{
+"ts": "2026-11-16T21:03:06+00:00",
+"cam": "tokyo-shibuya-centergai",
+"city": "Tokyo",
+"local": "2026-11-17 06:03",
+"judged": 2,
+"yes": 1,
+"no": 1,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T21:03:06+00:00",
+"cam": "osaka-dotonbori",
+"city": "Osaka",
+"local": "2026-11-17 06:03",
+"judged": 2,
+"yes": 0,
+"no": 2,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T21:03:06+00:00",
+"cam": "nyc-bryant-park",
+"city": "New York",
+"local": "2026-11-16 16:03",
+"judged": 29,
+"yes": 2,
+"no": 14,
+"unclear": 13
+},
+{
+"ts": "2026-11-16T21:03:06+00:00",
+"cam": "seoul-hongdae",
+"city": "Seoul",
+"local": "2026-11-17 06:03",
+"judged": 2,
+"yes": 0,
+"no": 0,
+"unclear": 2
+},
+{
+"ts": "2026-11-16T21:03:06+00:00",
+"cam": "bangkok-sukhumvit-soi11",
+"city": "Bangkok",
+"local": "2026-11-17 04:03",
+"judged": 1,
+"yes": 1,
+"no": 0,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T21:03:06+00:00",
+"cam": "davao-agdao",
+"city": "Davao City",
+"local": "2026-11-17 05:03",
+"judged": 3,
+"yes": 0,
+"no": 3,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T21:03:06+00:00",
+"cam": "melbourne-intersection",
+"city": "Melbourne",
+"local": "2026-11-17 08:03",
+"judged": 4,
+"yes": 0,
+"no": 1,
+"unclear": 3
+},
+{
+"ts": "2026-11-16T21:03:06+00:00",
+"cam": "dublin-temple-bar",
+"city": "Dublin",
+"local": "2026-11-16 21:03",
+"judged": 14,
+"yes": 1,
+"no": 11,
+"unclear": 2
+},
+{
+"ts": "2026-11-16T21:03:06+00:00",
+"cam": "venice-strada-nova",
+"city": "Venice",
+"local": "2026-11-16 22:03",
+"judged": 20,
+"yes": 0,
+"no": 0,
+"unclear": 20
+},
+{
+"ts": "2026-11-16T21:03:06+00:00",
+"cam": "new-orleans-french-quarter",
+"city": "New Orleans",
+"local": "2026-11-16 15:03",
+"judged": 7,
+"yes": 0,
+"no": 4,
+"unclear": 3
+},
+{
+"ts": "2026-11-16T21:03:06+00:00",
+"cam": "key-west-duval",
+"city": "Key West",
+"local": "2026-11-16 16:03",
+"judged": 2,
+"yes": 1,
+"no": 1,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T22:19:34+00:00",
+"cam": "tokyo-shibuya-centergai",
+"city": "Tokyo",
+"local": "2026-11-17 07:19",
+"judged": 3,
+"yes": 1,
+"no": 0,
+"unclear": 2
+},
+{
+"ts": "2026-11-16T22:19:34+00:00",
+"cam": "osaka-dotonbori",
+"city": "Osaka",
+"local": "2026-11-17 07:19",
+"judged": 2,
+"yes": 0,
+"no": 0,
+"unclear": 2
+},
+{
+"ts": "2026-11-16T22:19:34+00:00",
+"cam": "nyc-bryant-park",
+"city": "New York",
+"local": "2026-11-16 17:19",
+"judged": 30,
+"yes": 5,
+"no": 20,
+"unclear": 5
+},
+{
+"ts": "2026-11-16T22:19:34+00:00",
+"cam": "seoul-hongdae",
+"city": "Seoul",
+"local": "2026-11-17 07:19",
+"judged": 4,
+"yes": 0,
+"no": 2,
+"unclear": 2
+},
+{
+"ts": "2026-11-16T22:19:34+00:00",
+"cam": "davao-agdao",
+"city": "Davao City",
+"local": "2026-11-17 06:19",
+"judged": 12,
+"yes": 2,
+"no": 2,
+"unclear": 8
+},
+{
+"ts": "2026-11-16T22:19:34+00:00",
+"cam": "melbourne-intersection",
+"city": "Melbourne",
+"local": "2026-11-17 09:19",
+"judged": 1,
+"yes": 0,
+"no": 0,
+"unclear": 1
+},
+{
+"ts": "2026-11-16T22:19:34+00:00",
+"cam": "dublin-temple-bar",
+"city": "Dublin",
+"local": "2026-11-16 22:19",
+"judged": 5,
+"yes": 0,
+"no": 3,
+"unclear": 2
+},
+{
+"ts": "2026-11-16T22:19:34+00:00",
+"cam": "jiufen-old-street",
+"city": "Jiufen",
+"local": "2026-11-17 06:19",
+"judged": 1,
+"yes": 0,
+"no": 0,
+"unclear": 1
+},
+{
+"ts": "2026-11-16T22:19:34+00:00",
+"cam": "venice-strada-nova",
+"city": "Venice",
+"local": "2026-11-16 23:19",
+"judged": 6,
+"yes": 0,
+"no": 0,
+"unclear": 6
+},
+{
+"ts": "2026-11-16T22:19:34+00:00",
+"cam": "new-orleans-french-quarter",
+"city": "New Orleans",
+"local": "2026-11-16 16:19",
+"judged": 8,
+"yes": 0,
+"no": 8,
+"unclear": 0
+},
+{
+"ts": "2026-11-16T22:19:34+00:00",
+"cam": "key-west-duval",
+"city": "Key West",
+"local": "2026-11-16 17:19",
+"judged": 2,
+"yes": 0,
+"no": 2,
+"unclear": 0
+},
+{
+"ts": "2026-11-17T00:08:15+00:00",
+"cam": "tokyo-shibuya-centergai",
+"city": "Tokyo",
+"local": "2026-11-17 09:08",
+"judged": 11,
+"yes": 2,
+"no": 7,
+"unclear": 2
+},
+{
+"ts": "2026-11-17T00:08:15+00:00",
+"cam": "osaka-dotonbori",
+"city": "Osaka",
+"local": "2026-11-17 09:08",
+"judged": 15,
+"yes": 2,
+"no": 5,
+"unclear": 8
+},
+{
+"ts": "2026-11-17T00:08:15+00:00",
+"cam": "nyc-bryant-park",
+"city": "New York",
+"local": "2026-11-16 19:08",
+"judged": 30,
+"yes": 2,
+"no": 21,
+"unclear": 7
+},
+{
+"ts": "2026-11-17T00:08:15+00:00",
+"cam": "seoul-hongdae",
+"city": "Seoul",
+"local": "2026-11-17 09:08",
+"judged": 15,
+"yes": 1,
+"no": 4,
+"unclear": 10
+},
+{
+"ts": "2026-11-17T00:08:15+00:00",
+"cam": "bangkok-sukhumvit-soi11",
+"city": "Bangkok",
+"local": "2026-11-17 07:08",
+"judged": 1,
+"yes": 0,
+"no": 0,
+"unclear": 1
+},
+{
+"ts": "2026-11-17T00:08:15+00:00",
+"cam": "davao-agdao",
+"city": "Davao City",
+"local": "2026-11-17 08:08",
+"judged": 4,
+"yes": 0,
+"no": 1,
+"unclear": 3
+},
+{
+"ts": "2026-11-17T00:08:15+00:00",
+"cam": "dublin-temple-bar",
+"city": "Dublin",
+"local": "2026-11-17 00:08",
+"judged": 7,
+"yes": 3,
+"no": 4,
+"unclear": 0
+},
+{
+"ts": "2026-11-17T00:08:15+00:00",
+"cam": "jiufen-old-street",
+"city": "Jiufen",
+"local": "2026-11-17 08:08",
+"judged": 5,
+"yes": 0,
+"no": 0,
+"unclear": 5
+},
+{
+"ts": "2026-11-17T00:08:15+00:00",
+"cam": "new-orleans-french-quarter",
+"city": "New Orleans",
+"local": "2026-11-16 18:08",
+"judged": 9,
+"yes": 2,
+"no": 7,
+"unclear": 0
+},
+{
+"ts": "2026-11-17T00:08:15+00:00",
+"cam": "key-west-duval",
+"city": "Key West",
+"local": "2026-11-16 19:08",
+"judged": 5,
+"yes": 0,
+"no": 3,
+"unclear": 2
+},
+{
+"ts": "2026-11-17T02:09:30+00:00",
+"cam": "tokyo-shibuya-centergai",
+"city": "Tokyo",
+"local": "2026-11-17 11:09",
+"judged": 14,
+"yes": 3,
+"no": 7,
+"unclear": 4
+},
+{
+"ts": "2026-11-17T02:09:30+00:00",
+"cam": "osaka-dotonbori",
+"city": "Osaka",
+"local": "2026-11-17 11:09",
+"judged": 30,
+"yes": 3,
+"no": 22,
+"unclear": 5
+},
+{
+"ts": "2026-11-17T02:09:30+00:00",
+"cam": "nyc-bryant-park",
+"city": "New York",
+"local": "2026-11-16 21:09",
+"judged": 3,
+"yes": 0,
+"no": 2,
+"unclear": 1
+},
+{
+"ts": "2026-11-17T02:09:30+00:00",
+"cam": "seoul-hongdae",
+"city": "Seoul",
+"local": "2026-11-17 11:09",
+"judged": 12,
+"yes": 1,
+"no": 6,
+"unclear": 5
+},
+{
+"ts": "2026-11-17T02:09:30+00:00",
+"cam": "bangkok-sukhumvit-soi11",
+"city": "Bangkok",
+"local": "2026-11-17 09:09",
+"judged": 5,
+"yes": 1,
+"no": 2,
+"unclear": 2
+},
+{
+"ts": "2026-11-17T02:09:30+00:00",
+"cam": "davao-agdao",
+"city": "Davao City",
+"local": "2026-11-17 10:09",
+"judged": 6,
+"yes": 0,
+"no": 1,
+"unclear": 5
+},
+{
+"ts": "2026-11-17T02:09:30+00:00",
+"cam": "melbourne-intersection",
+"city": "Melbourne",
+"local": "2026-11-17 13:09",
+"judged": 2,
+"yes": 0,
+"no": 0,
+"unclear": 2
+},
+{
+"ts": "2026-11-17T02:09:30+00:00",
+"cam": "dublin-temple-bar",
+"city": "Dublin",
+"local": "2026-11-17 02:09",
+"judged": 3,
+"yes": 0,
+"no": 1,
+"unclear": 2
+},
+{
+"ts": "2026-11-17T02:09:30+00:00",
+"cam": "jiufen-old-street",
+"city": "Jiufen",
+"local": "2026-11-17 10:09",
+"judged": 10,
+"yes": 1,
+"no": 3,
+"unclear": 6
+},
+{
+"ts": "2026-11-17T02:09:30+00:00",
+"cam": "new-orleans-french-quarter",
+"city": "New Orleans",
+"local": "2026-11-16 20:09",
+"judged": 10,
+"yes": 0,
+"no": 5,
+"unclear": 5
+},
+{
+"ts": "2026-11-17T04:11:03+00:00",
+"cam": "tokyo-shibuya-centergai",
+"city": "Tokyo",
+"local": "2026-11-17 13:11",
+"judged": 12,
+"yes": 0,
+"no": 10,
+"unclear": 2
+},
+{
+"ts": "2026-11-17T04:11:03+00:00",
+"cam": "seoul-hongdae",
+"city": "Seoul",
+"local": "2026-11-17 13:11",
+"judged": 14,
+"yes": 2,
+"no": 7,
+"unclear": 5
+},
+{
+"ts": "2026-11-17T04:11:03+00:00",
+"cam": "bangkok-sukhumvit-soi11",
+"city": "Bangkok",
+"local": "2026-11-17 11:11",
+"judged": 4,
+"yes": 0,
+"no": 2,
+"unclear": 2
+},
+{
+"ts": "2026-11-17T04:11:03+00:00",
+"cam": "davao-agdao",
+"city": "Davao City",
+"local": "2026-11-17 12:11",
+"judged": 6,
+"yes": 0,
+"no": 4,
+"unclear": 2
+},
+{
+"ts": "2026-11-17T04:11:03+00:00",
+"cam": "melbourne-intersection",
+"city": "Melbourne",
+"local": "2026-11-17 15:11",
+"judged": 5,
+"yes": 0,
+"no": 0,
+"unclear": 5
+},
+{
+"ts": "2026-11-17T04:11:03+00:00",
+"cam": "jiufen-old-street",
+"city": "Jiufen",
+"local": "2026-11-17 12:11",
+"judged": 29,
+"yes": 0,
+"no": 9,
+"unclear": 20
+},
+{
+"ts": "2026-11-17T04:11:03+00:00",
+"cam": "venice-strada-nova",
+"city": "Venice",
+"local": "2026-11-17 05:11",
+"judged": 5,
+"yes": 0,
+"no": 0,
+"unclear": 5
+},
+{
+"ts": "2026-11-17T04:11:03+00:00",
+"cam": "new-orleans-french-quarter",
+"city": "New Orleans",
+"local": "2026-11-16 22:11",
+"judged": 12,
+"yes": 1,
+"no": 4,
+"unclear": 7
 }
 ]
