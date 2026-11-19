@@ -6,6 +6,10 @@ See them all, with the story and reading links for each: https://kramermusician.
 
 Every number is checked against a named source before a graph is posted. The sources are printed at the foot of each graph.
 
+## Thursday, November 19, 2026
+
+- [“I” or “we”?](graphs/inaugural-i-vs-we.png)
+
 ## Wednesday, November 18, 2026
 
 - [A 9-second goldfish?](graphs/goldfish-nine-seconds.png)
