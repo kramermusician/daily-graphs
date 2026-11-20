@@ -6,6 +6,10 @@ See them all, with the story and reading links for each: https://kramermusician.
 
 Every number is checked against a named source before a graph is posted. The sources are printed at the foot of each graph.
 
+## Friday, November 20, 2026
+
+- [The cat vs. the screen](graphs/cat-sleep-vs-teen-screens.png)
+
 ## Thursday, November 19, 2026
 
 - [“I” or “we”?](graphs/inaugural-i-vs-we.png)
