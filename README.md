@@ -6,6 +6,10 @@ See them all, with the story and reading links for each: https://kramermusician.
 
 Every number is checked against a named source before a graph is posted. The sources are printed at the foot of each graph.
 
+## Saturday, November 21, 2026
+
+- [The water bear vs. your phone](graphs/water-bear-vs-phone-battery.png)
+
 ## Friday, November 20, 2026
 
 - [The cat vs. the screen](graphs/cat-sleep-vs-teen-screens.png)
