@@ -6,6 +6,10 @@ See them all, with the story and reading links for each: https://kramermusician.
 
 Every number is checked against a named source before a graph is posted. The sources are printed at the foot of each graph.
 
+## Tuesday, November 24, 2026
+
+- [An ancient tree vs. a viral hit](graphs/oldest-tree-vs-viral-hit.png)
+
 ## Monday, November 23, 2026
 
 - [A two-toed sloth vs. Boston traffic](graphs/sloth-vs-boston-traffic.png)
