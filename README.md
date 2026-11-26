@@ -6,6 +6,10 @@ See them all, with the story and reading links for each: https://kramermusician.
 
 Every number is checked against a named source before a graph is posted. The sources are printed at the foot of each graph.
 
+## Thursday, November 26, 2026
+
+- [CDs vs. vinyl, 2000 and 2025](graphs/cds-vs-vinyl.png)
+
 ## Wednesday, November 25, 2026
 
 - [Tree rings vs. iPhones](graphs/tree-rings-vs-iphones.png)
