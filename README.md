@@ -6,6 +6,10 @@ See them all, with the story and reading links for each: https://kramermusician.
 
 Every number is checked against a named source before a graph is posted. The sources are printed at the foot of each graph.
 
+## Saturday, November 28, 2026
+
+- [Hours of work for one concert ticket](graphs/concert-ticket-hours.png)
+
 ## Friday, November 27, 2026
 
 - [An octopus vs. your streaming apps](graphs/octopus-vs-streaming.png)
